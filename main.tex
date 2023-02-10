@@ -288,16 +288,16 @@ The backup service allows a user to store an encrypted copy of their data on Com
 
 The backup includes all cryptographic material necessary to restore all double-ratchet sessions: both for messages and for notifications. Double ratchet sessions are not reinitiated upon restoring from a backup.\\
 
-% \procedureblock[colspace=0cm]{\textbf{Protocol: Backup}}{
-% \textbf{\large \faUser~User} \> \> \textbf{\large \faServer~Comm}\pclb
-% \pcintertext[dotted]{After user authentication}\\
-% \text{Choose random } \bid, \bkdata \text{ and set} \> \> \\
-% \bk  \gets   \> \>\\
-% \bk  \gets   \> \>\\
-% \ct_1 \gets \aesenc(\bk, \userkeys) \> \>\\
-% \ct_2 \gets \aesenc(\bkdata, \userdata) \> \>\\
-% \> \sendmessageright*{\bid, \ct_1, \ct_2} \> \text{Store } \bid, \ct_1, \ct_2
-% }
+\procedureblock[colspace=0cm]{\textbf{Protocol: Backup}}{
+\textbf{\large \faUser~User} \> \> \textbf{\large \faServer~Comm}\pclb
+\pcintertext[dotted]{After user authentication}\\
+\text{Choose random } \bid, \bkdata \text{ and set} \> \>\\
+\bk  \gets   \> \>\\
+\bk  \gets   \> \>\\
+\ct_1 \gets \aesenc(\bk, \userkeys) \> \>\\
+\ct_2 \gets \aesenc(\bkdata, \userdata) \> \>\\
+\> \sendmessageright*{\bid, \ct_1, \ct_2} \> \text{Store } \bid, \ct_1, \ct_2
+}
 
 \noindent \textbf{Protocol: Backup}
 \begin{itemize}
